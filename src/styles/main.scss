@@ -19,7 +19,7 @@ body{
 
 .header {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
@@ -89,6 +89,10 @@ body{
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    position: relative;
+    padding-bottom: 187px;
+    padding-left: 225px;
+    padding-right: 225px;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -96,6 +100,121 @@ body{
     }
     &__link {
         margin-top: 6rem;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+    }
+    &__cover {
+        flex-basis: 763px;
+        height: 763px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__line {
+        width: 658px;
+        height: 658px;
+        // box-shadow: 0 0 0 1px rgba($green, 0.4), 0 0 0 53px #fff, 0 0 0 54px rgba($green, 0.4);
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        width: 92%;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute; 
+        color: $green;
+        text-align: left;
+        &:hover {
+            // .main__btn {
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                }
+            // }
+        }
+        &::before {
+            content: '';
+            background-color: $green;
+            width: 11px;
+            height: 11px;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            position: absolute;   
+        }
+        &_1 {
+            top: 87px;
+            left: 25px;
+            &::before {
+                bottom: 7px;
+                right: -33px;
+            }
+            
+        }
+        &_2 {
+            top: 190px;
+            right: 0px;
+            &::before {
+                bottom: 5px;
+                left: -30px;
+            }
+        }
+        &_3 {
+            bottom: -37px;
+            right: 250px;
+            &::before {
+                top: -20px;
+                right: 22px;
+            }
+        }
+    }
+    &__food {
+        display: block;
+        color: rgba($green, 0.8);
+    }
+    &__tomato {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 11rem;
+    }
+    &__cucumber {
+        position: absolute;
+        top: 0px;
+        left: 707px;
+        width: 8.5rem;
+    }
+    &__pepper {
+        position: absolute;
+        top: 398px;
+        left: 37px;
+        width: 8.6rem;
+    }
+    &__beans {
+        position: absolute;
+        top: 798px;
+        left: 0px;
+        width: 10.5rem;
+    }
+    &__avocado {
+        position: absolute;
+        top: 52px;
+        right: 0px;
+        width: 17rem;
     }
 }
 .title {
