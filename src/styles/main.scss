@@ -131,6 +131,8 @@ body{
     }
     &__image {
         width: 92%;
+        box-shadow: 20px 40px 20px 10px rgba($color: #9ba595, $alpha: 0.3);
+        border-radius: 100%;
     }
     &__btn {
         background-color: transparent;
