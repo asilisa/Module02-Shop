@@ -58,6 +58,33 @@ var swiper = new Swiper(".offerSwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    modules: [Navigation, Pagination]
+    modules: [Navigation, Pagination],
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+        //   spaceBetween: 20,
+          slidesPerGroup: 1
+        },
+        768: {
+            slidesPerView: 2,
+          //   spaceBetween: 20,
+            slidesPerGroup: 2
+        },
+        1200: {
+            slidesPerView: 3,
+          //   spaceBetween: 20,
+            slidesPerGroup: 3
+          },
+        
+      }
     
+  });
+  var swiper = new Swiper(".categorySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
   });
