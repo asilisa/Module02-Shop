@@ -49,6 +49,9 @@ body{
     @media (max-width: $r_desk_1280) {
         gap: 3%;
     }
+    @media (max-width: $r_mob500) {
+        margin: 0px 30px 0 28px;
+    }
     &__navigation {
         flex-grow: 1;
         margin-left: 4.5rem;
@@ -304,15 +307,15 @@ body{
     }
 }
 .main {
-    // background-image: url(../images/main.png);
-    // background-size: contain;
-    // background-position-x: center;
-    // background-repeat: no-repeat;
     position: relative;
-    padding-bottom: 70px;
+    padding-bottom: 18.7rem;
     z-index: 0;
-    // padding-left: 225px;
-    // padding-right: 225px;
+    @media (max-width: $r_tab) {
+        padding-bottom: 3rem;
+    }
+    @media (max-width: $r_mob500) {
+        padding-bottom: 2rem;
+    }
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -640,6 +643,9 @@ body{
     @media (max-width: $r_tab) {
         text-align: center;
     }
+    @media (max-width: $r_mob500) {
+        font-size: 5rem;
+    }
     @media (max-width: $r_mob360) {
         font-size: 4rem;
         letter-spacing: -1px;
@@ -678,6 +684,9 @@ body{
         font-size: 2.4rem;
         @media (max-width: $r_desk_1280) {
             font-size: 2.2rem;
+        }
+        @media (max-width: $r_mob360) {
+            font-size: 1.5rem;
         }
     }
     &_trends {
@@ -731,11 +740,13 @@ body{
     // }
 }
 .offer {
-    padding-top: 2rem;
-    // padding-top: 12.55rem;
-    // padding-bottom: 12.8rem;
+    padding-top: 1rem;
+    padding-bottom: 12.8rem;
     @media (max-width: $r_tab) {
-        padding-bottom: rem;
+        padding-bottom: 4rem;
+    }
+    @media (max-width: $r_mob500) {
+        padding-bottom: 2rem;
     }
     &__text {
         margin-top: 6rem;
@@ -765,7 +776,7 @@ body{
     
     &-slide {
         border: 1px solid rgba($green, 0.4);
-        height: 685px; //520px;
+        // height: 685px; //520px;
         border-radius: 2rem;
         padding: 3rem 3.7rem 3.8rem;//4rem 3.7rem;
         position: relative;
@@ -792,6 +803,7 @@ body{
             justify-content: flex-end;
             height: 520px;
             background-size: contain;
+            padding: 4rem 3.7rem;
             @media (max-width: $r_desk_hd) {
                 height: 400px;
             }
@@ -831,19 +843,10 @@ body{
         }
         &__title {
             font-family: $font-cormorant;
-            // font-weight: 700;
             font-size: 3rem;
             color: $green;
-            margin-bottom: 0;
-            padding-top: 10px;
-            // position: absolute;
-            // bottom: 0px;
-            // left: 40px;
-            // &:hover {
-            //     top: 215px;
-            //     left: 35px;
-                
-            // } 
+            margin-bottom: -6px;
+ 
             @media (max-width: $r_mob500) {
                 font-size: 1.75rem;
                 text-align: center;
@@ -856,11 +859,7 @@ body{
         }
         &__text {
             color: rgba($green, 0.7);
-            position: absolute;
-            // bottom: 0px;
             max-width: 263px;
-            // margin-left: 35px;
-            // margin-top: 268px;
             line-height: 1.5;
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
@@ -892,7 +891,8 @@ body{
                 font-size: 1.25rem;
                 justify-content: center;
                 gap: 1rem;
-            }           
+            } 
+               
             &:hover {
                 opacity: 1;
             }
@@ -912,6 +912,9 @@ body{
         }
         &_bottle {
             background-image: url(../images/bottle.png);
+            @media (max-width: $r_mob500) {
+                background-image: url(../images/catalog/milk.png);
+            } 
         }
         &_pasta {
             background-image: url(../images/pasta.png);
@@ -939,9 +942,8 @@ body{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            top: -10px;
             position: relative;
-            gap:5%;
+            gap:10%;
         }
         &__price {
             margin-bottom: 3rem;
@@ -949,6 +951,10 @@ body{
         &__description {
             min-height: 55px;
             font-size: 1.8rem;
+            margin-bottom: 0;
+            margin-top: 3rem;
+            line-height: 1.5;
+            max-width: 100%;
         }
     }
     &-pagination {
@@ -973,11 +979,20 @@ body{
         }
     }
     &-button-next {
-        right: -8px;
+        right: -12px;
     }
     &-button-prev {
         left: initial;
-        right: 80px;    
+        right: 71px;    
+    }
+    &-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
     }
 }
 .swiper-horizontal>.swiper-pagination-bullets {
@@ -1045,10 +1060,8 @@ body{
     }
 }
 .about {
-    // padding-top: 0;
-    // padding-left: .0;
-    // padding-top: 37px;
-    padding-bottom: 100px;   
+    padding-top: 3.7rem;
+    padding-bottom: 10rem; 
     &__box{
         display: flex;
         align-items: center;
@@ -1065,9 +1078,8 @@ body{
         }       
     }
     &__text {
-        flex-basis: 620px;
+        flex-basis: 580px;
         margin-left: 11rem;
-        max-width: 580px;
         @media (max-width: $r_desk_1280) {
             margin-left: 8rem;
         }
@@ -1142,18 +1154,34 @@ body{
     } 
 }
 .trends {
-    padding-top: 8rem; //4rem;
+    padding-top: 8.5rem; //4rem;
     padding-bottom: 8rem;
     @media (max-width: $r_tab) {
         padding-top: 4rem; 
         padding-bottom: 4rem;
     }
+    @media (max-width: $r_mob500) {
+        padding-top: 2rem; 
+        padding-bottom: 2rem;
+    }
     &__text{
-        padding-top: 30px;
+        padding-top: 3rem;
+        margin-bottom: -2.4rem;
     }
 }
 .catalog {
-    padding-top: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 14rem;
+    @media (max-width: $r_tab)
+            {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    @media (max-width: $r_mob500)
+            {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        }
     
     &__text {
         padding-top: 3.5rem;
@@ -1365,8 +1393,7 @@ body{
     }
 }
 .delivery {
-    padding-top: 14rem;
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
     @media (max-width: $r_mob360) {
         padding-top: 6.5rem;
         padding-bottom: 0rem;
@@ -1484,14 +1511,16 @@ body{
     }
 }
 .contact {
-    // padding-top: 100px;
-    // padding-bottom: 16rem;
-    padding-top: 7.3rem;
-    padding-bottom: 15.5rem;
+    padding-top: 9rem;
+    padding-bottom: 16rem;
     @media (max-width: $r_tab) {
         padding-top: 4rem;
         padding-bottom: 8rem;
     } 
+    @media (max-width: $r_mob360)
+        {
+         padding-top: 6rem;
+    }
     &-box {
         display: flex;
         align-items: center;
@@ -1564,6 +1593,10 @@ body{
             gap: 1rem;
             font-size: 1.5rem;
         } 
+        @media (max-width: $r_tab) {
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
             &_tel {
                 &::before {
                     content: '';
@@ -1575,6 +1608,13 @@ body{
                     background-image: url(../images/phone.png);
                     @media (max-width: $r_tab) {
                         background-position: center;
+                    } 
+                    @media (max-width: $r_mob360) {
+                        width: 19px;
+                        height: 14px;
+                        display: block;
+                        background-image: url(../images/phone_mob.png);
+                        background-position: center; 
                     } 
                 }
             }
@@ -1590,6 +1630,13 @@ body{
                     @media (max-width: $r_tab) {
                         background-position: center;
                     }
+                    @media (max-width: $r_mob360) {
+                        width: 15px;
+                        height: 9px;
+                        display: block;
+                        background-image: url(../images/mail_mob.png);
+                        background-position: center; 
+                    } 
                 }
             }    
          }
@@ -1601,6 +1648,11 @@ body{
                 display: flex;
                 justify-content: space-between;
                 font-size: 1.6rem;
+            } 
+            @media (max-width: $r_mob500) {
+                display: flex;
+                justify-content: space-between;
+                font-size: 2rem;
             } 
         }
     }
@@ -1661,7 +1713,7 @@ body{
 }    
 footer {
     border-top: 1px solid #d4d6cf;
-    padding-top: 7.9rem;
+    padding-top: 7.8rem;
     padding-bottom: 7rem;
 }
 .footer {
@@ -1684,8 +1736,9 @@ footer {
             flex-basis: auto;
             flex-grow: 1;
         }
-        @media (max-width: $r_mob500) {
+        @media (max-width: $r_tab) {
             flex-direction: column;
+            text-align: center;
         }
     }
     &__list {
@@ -1736,7 +1789,7 @@ footer {
             margin-bottom: 1rem;
         }
         @media (max-width: $r_mob500) {
-            font-size:3.8rem;
+            font-size: 3.8rem;
    
         }
     }
@@ -1749,7 +1802,6 @@ footer {
         @media (max-width: $r_tab) {
             flex-direction: column;
             text-align: center;
-                margin: 3rem 6.5rem
         }
         @media (max-width: $r_mob500) {
             font-size: 1rem;
@@ -1772,6 +1824,10 @@ footer {
     padding-left: 0;
     margin-top: 3rem;
     margin-bottom: 0;
+    @media (max-width: $r_tab) {
+        max-width: 230px;
+        margin: 3rem auto 0;
+    }
     @media (max-width: $r_mob500) {
         background-size: 2rem;
         justify-content: space-around;
