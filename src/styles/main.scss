@@ -34,9 +34,9 @@ body{
     font-family: $font-jost;
     color: $green;
     background-image: url(../images/bckgr_full.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .header {
