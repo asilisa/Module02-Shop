@@ -35,7 +35,7 @@ body{
     background-image: url(../images/bckgr_full.png);
     background-size: cover;
     background-repeat: no-repeat;
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .header {
@@ -573,8 +573,8 @@ body{
     }
     &__cucumber {
         position: absolute;
-        top: -4px;
-        left: 598px;
+        top: 0;
+        left: 34%;
         width: 8.5rem;
         z-index: -1;
         @media (max-width: $r_mob500) {
@@ -585,6 +585,10 @@ body{
             right: -15px;
             bottom: 200px;
         }
+        @media (max-width: $r_mob360) {
+            bottom: 125px;
+        }
+        
     }
     &__pepper {
         position: absolute;
@@ -615,7 +619,7 @@ body{
     &__avocado {
         position: absolute;
         top: 46px;
-        right: -86px;
+        right: 0;
         width: 17rem;
         z-index: -1;
         @media (max-width: $r_desk_full_1750) {
